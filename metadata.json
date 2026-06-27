@@ -1,0 +1,6 @@
+{
+  "name": "Inventory Replenishment Planner",
+  "description": "A standalone SaaS inventory planning & replenishment decision system based on the Excel workbook model, with real-time ROP, safety stock, and ABC-XYZ demand forecasting calculations.",
+  "requestFramePermissions": [],
+  "majorCapabilities": ["MAJOR_CAPABILITY_SERVER_SIDE_GEMINI_API"]
+}

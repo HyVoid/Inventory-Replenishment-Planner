@@ -1,0 +1,119 @@
+@import url('https://fonts.googleapis.com/css2?family=EB+Garamond:ital,wght@0,400..800;1,400..800&family=Inter:ital,wght@0,100..900;1,100..900&display=swap');
+@import "tailwindcss";
+
+@theme {
+  --color-brand-bg: #F5F5F2;
+  --color-brand-card: #FFFFFF;
+  --color-brand-primary: #051C2C;
+  --color-brand-accent: #2251FF;
+  --color-brand-accent-hover: #1740E0;
+  --color-brand-gray: #888888;
+  --color-brand-green: #00C853;
+  --color-brand-red: #D32F2F;
+  --color-brand-yellow-bg: #FFFDE7;
+  
+  --font-serif: "EB Garamond", serif;
+  --font-sans: "Inter", system-ui, -apple-system, sans-serif;
+}
+
+/* Custom styles based on typography & component guidelines */
+body {
+  background-color: var(--color-brand-bg);
+  color: var(--color-brand-primary);
+  font-family: var(--font-sans);
+  font-size: 13px;
+  margin: 0;
+  padding: 0;
+}
+
+.eb-garamond-title {
+  font-family: var(--font-serif);
+  letter-spacing: -0.025em;
+}
+
+.eb-garamond-kpi {
+  font-family: var(--font-serif);
+  letter-spacing: -0.03em;
+  font-weight: 700;
+}
+
+.table-header-custom {
+  font-size: 11px;
+  text-transform: uppercase;
+  letter-spacing: 0.06em;
+  font-weight: 600;
+  color: var(--color-brand-primary);
+}
+
+.card-shadow {
+  box-shadow: 0 4px 20px -2px rgba(5, 28, 44, 0.05), 0 2px 8px -1px rgba(5, 28, 44, 0.03);
+  border-radius: 12px;
+  background-color: var(--color-brand-card);
+  transition: transform 0.22s cubic-bezier(0.16, 1, 0.3, 1), box-shadow 0.22s ease;
+}
+
+.card-shadow:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 10px 25px -4px rgba(5, 28, 44, 0.08), 0 4px 12px -2px rgba(5, 28, 44, 0.04);
+}
+
+.badge-pill {
+  border-radius: 9999px;
+  font-size: 11px;
+  font-weight: 500;
+  padding: 2px 8px;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.insight-block {
+  border-left: 3px solid var(--color-brand-accent);
+  background-color: rgba(5, 28, 44, 0.04);
+  padding: 16px;
+  border-radius: 0 12px 12px 0;
+}
+
+.editable-input {
+  background-color: var(--color-brand-yellow-bg);
+  border: 1px solid rgba(5, 28, 44, 0.1);
+  border-radius: 6px;
+  padding: 4px 8px;
+  color: var(--color-brand-primary);
+  font-family: var(--font-sans);
+  font-size: 13px;
+  transition: border-color 0.15s ease, box-shadow 0.15s ease;
+}
+
+.editable-input:focus {
+  outline: none;
+  border-color: var(--color-brand-accent);
+  box-shadow: 0 0 0 2px rgba(34, 81, 255, 0.15);
+}
+
+.clickable-cell {
+  transition: transform 0.15s cubic-bezier(0.16, 1, 0.3, 1), filter 0.15s ease;
+}
+
+.clickable-cell:hover {
+  transform: scale(1.04);
+  filter: brightness(1.05);
+  cursor: pointer;
+}
+
+/* Scrollbar styles for pure aesthetics */
+::-webkit-scrollbar {
+  width: 6px;
+  height: 6px;
+}
+::-webkit-scrollbar-track {
+  background: transparent;
+}
+::-webkit-scrollbar-thumb {
+  background: rgba(5, 28, 44, 0.15);
+  border-radius: 9999px;
+}
+::-webkit-scrollbar-thumb:hover {
+  background: rgba(5, 28, 44, 0.3);
+}
+
